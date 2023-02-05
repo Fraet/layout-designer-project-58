@@ -16,10 +16,13 @@ body {
     font-size: 16px;
     line-height: 1.6em;
     color: var(--Тёмный);
+    position: relative;
 }
 
 h1, h2, h3 {
+    font-family: 'Neucha', cursive;
     line-height: 1.2em;
+    font-weight: 400;
 }
 
 h1 {
@@ -34,8 +37,76 @@ h3 {
     font-size: 34px;
 }
 
-.section {
+.wrapper {
+    position: relative;
     max-width: 1110px;
     margin: 0 auto;
     padding: 100px 0;
 }
+
+.header {
+    background-color: var(--Светлый);
+}
+
+.header::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    background-image: url('../img/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 90%;
+}
+
+.orange {
+    color: var(--Основной);
+}
+
+.header_title {
+    margin-bottom: 185px;
+}
+
+.header_title::after {
+    content: url(../img/header-img.png);
+    position: absolute;
+    top: 150px;
+    left: 335px;
+    height: 525px;
+}
+
+.columns_section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.columns_2 {
+    width: 540px;
+}
+
+.header_description {
+    margin: 0;
+}
+
+.mt {
+    margin-top: 15px;
+}
+
+.header_link {
+    display: inline-block;
+    margin-top: 40px;
+    color: var(--Белый);
+    padding: 12px 24px;
+    font-weight: bold;
+    background-color: var(--Основной);
+    font-style: uppercase;
+    text-decoration: none;
+}
+
+.header_link:hover {
+    background-color: #ea7600;
+}
+
+
