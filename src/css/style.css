@@ -50,6 +50,7 @@ h3 {
 
 .header::before {
     position: absolute;
+    z-index: 0;
     top: 0;
     bottom: 0;
     left: 0;
@@ -111,4 +112,23 @@ h3 {
     background-color: #ea7600;
 }
 
+/* video__section */
 
+.video__section {
+    position: relative;
+    text-align: center;
+    background-color: var(--Белый);
+}
+
+.video__title {
+    margin: 0 0 30px 0;
+}
+
+.video__description {
+    margin: 0 0 30px 0;
+}
+
+.video {
+    filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
+    position: relative;
+}
