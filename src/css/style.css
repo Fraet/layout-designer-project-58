@@ -11,6 +11,10 @@
     --Синий: #1085c5;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
@@ -19,7 +23,9 @@ body {
     position: relative;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Neucha', cursive;
     line-height: 1.2em;
     font-weight: 400;
@@ -110,6 +116,8 @@ h3 {
     background-color: var(--Основной);
     text-transform: uppercase;
     text-decoration: none;
+    ;
+    transition: all .3s;
 }
 
 .header__link:hover {
@@ -147,20 +155,47 @@ h3 {
     background-color: var(--Основной-тёмный);
 }
 
-.nav__section > .wrapper {
+.nav__section>.wrapper {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
+
+}
+
+.nav__link-sqr {
+    display: block;
+    text-decoration: none;
+    color: var(--Тёмный);
 }
 
 .nav__sqr {
-    display: inline-block;
-    height: 350px;
+    width: 302px;
     padding: 24px;
+    margin-bottom: 20px;
+    margin-right: 30px;
+}
+
+.nav__sqr:first-child {
+    padding: 0;
+    width: 350px;
+}
+
+.nav__sqr:nth-child(3n) {
+    margin-right: 0;
+}
+
+.nav__sqr:nth-child(1n + 4) {
+    margin-bottom: 0;
+}
+
+.nav__link-sqr.white {
     background-color: var(--Светлый);
 }
 
 .nav__title {
+    margin: 0;
     font-size: 52px;
+    color: var(--Белый);
 }
 
 .nav__num {
@@ -168,8 +203,4 @@ h3 {
     font-size: 64px;
     font-family: 'Neucha', cursive;
     line-height: 1;
-}
-
-.nav__subtitle {
-    font-size: 34px;
 }
