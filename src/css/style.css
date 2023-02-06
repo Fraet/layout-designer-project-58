@@ -58,54 +58,56 @@ h3 {
     background-image: url('../img/background.png');
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 90%;
+    opacity: 0.9;
 }
 
 .orange {
     color: var(--Основной);
 }
 
-.header_title {
+.header__title {
+    position: relative;
+    margin-top: 0;
     margin-bottom: 185px;
+    z-index: 1;
 }
 
-.header_title::after {
+.header__img {
     content: url(../img/header-img.png);
     position: absolute;
-    top: 150px;
-    left: 335px;
+    overflow: hidden;
+    top: 55px;
+    right: -270px;
     height: 525px;
 }
 
-.columns_section {
+.columns__section {
     display: flex;
     justify-content: space-between;
 }
 
-.columns_2 {
+.columns__2 {
     width: 540px;
 }
 
-.header_description {
-    margin: 0;
+.header__description {
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
 }
 
-.mt {
-    margin-top: 15px;
-}
-
-.header_link {
+.header__link {
     display: inline-block;
     margin-top: 40px;
     color: var(--Белый);
     padding: 12px 24px;
     font-weight: bold;
     background-color: var(--Основной);
-    font-style: uppercase;
+    text-transform: uppercase;
     text-decoration: none;
 }
 
-.header_link:hover {
+.header__link:hover {
     background-color: #ea7600;
 }
 
